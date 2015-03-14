@@ -1,6 +1,6 @@
 class Hamming
   def self.compute(strand_a, strand_b)
-    min_size = [strand_a.size, strand_b.size].min
-    min_size
+    array = strand_a.chars.zip(strand_b.chars)
+    array.select {|e| (e[0] != e[1]) && (e[1] != nil)}.size
   end
 end
